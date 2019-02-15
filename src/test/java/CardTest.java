@@ -20,5 +20,10 @@ public class CardTest {
         assertEquals(Suit.DIAMONDS, card.getSuit());
     }
 
+    @Test
+    public void canGetRank(){
+        assertEquals(Rank.ACE, card.getRank());
+    }
+
 
 }

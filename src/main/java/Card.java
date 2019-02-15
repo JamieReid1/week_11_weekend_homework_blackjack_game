@@ -14,4 +14,8 @@ public class Card {
         return suit;
     }
 
+    public Rank getRank(){
+        return rank;
+    }
+
 }
