@@ -25,5 +25,10 @@ public class CardTest {
         assertEquals(Rank.ACE, card.getRank());
     }
 
+    @Test
+    public void canGetCardValue(){
+        assertEquals(11, card.getCardValue());
+    }
+
 
 }
