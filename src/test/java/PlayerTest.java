@@ -20,7 +20,12 @@ public class PlayerTest {
 
     @Test
     public void canGetPlayerName(){
-        assertEquals("Jamie", player.getPlayerName());
+        assertEquals("Jamie", player.getName());
+    }
+
+    @Test
+    public void canGetNumberOfCardsInHand(){
+        assertEquals(0, player.cardCount());
     }
 
 }

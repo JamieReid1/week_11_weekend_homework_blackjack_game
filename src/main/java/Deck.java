@@ -14,7 +14,7 @@ public class Deck {
     }
 
 
-    public int deckCardCount(){
+    public int cardCount(){
         return this.cards.size();
     }
 
