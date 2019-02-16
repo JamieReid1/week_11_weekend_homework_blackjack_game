@@ -34,4 +34,12 @@ public class PlayerTest {
         assertEquals(1, player.cardCount());
     }
 
+    @Test
+    public void canFoldHand(){
+        player.getCard(card);
+        assertEquals(1, player.cardCount());
+        player.foldHand();
+        assertEquals(0, player.cardCount());
+    }
+
 }

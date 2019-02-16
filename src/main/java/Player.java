@@ -26,4 +26,8 @@ public class Player {
         this.hand.add(card);
     }
 
+    public void foldHand(){
+        this.hand.clear();
+    }
+
 }
