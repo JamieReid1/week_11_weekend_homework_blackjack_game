@@ -17,4 +17,8 @@ public class Dealer {
         return this.hand.size();
     }
 
+    public Card dealCard(Deck deck){
+        return deck.dealCard();
+    }
+
 }
