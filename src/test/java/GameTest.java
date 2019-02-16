@@ -1,6 +1,9 @@
 
 import org.junit.Before;
-import java.util.ArrayList;
+import org.junit.Test;
+
+
+import static org.junit.Assert.assertEquals;
 
 
 public class GameTest {
@@ -12,7 +15,7 @@ public class GameTest {
     private Player player2;
 
     @Before
-    private void Before(){
+    public void Before(){
 
         deck = new Deck();
         dealer = new Dealer();
@@ -20,6 +23,12 @@ public class GameTest {
         player2 = new Player("Player 2");
         game = new Game(deck, dealer);
 
+    }
+
+
+    @Test
+    public void canGetPlayerCount(){
+        assertEquals(0, game.playerCount());
     }
 
 }

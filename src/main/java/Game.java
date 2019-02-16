@@ -17,4 +17,9 @@ public class Game {
     }
 
 
+    public int playerCount(){
+        return this.players.size();
+    }
+
+
 }
