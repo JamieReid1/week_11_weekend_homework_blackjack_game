@@ -18,8 +18,14 @@ public class DeckTest {
 
     @Test
     public void canPopulateDeckWith52Cards(){
-        deck.populateDeck();
         assertEquals(52, deck.deckCardCount());
+    }
+
+    @Test
+    public void canDealCard(){
+        deck.shuffleCards();
+        deck.dealCard();
+        assertEquals(51, deck.deckCardCount());
     }
 
 
