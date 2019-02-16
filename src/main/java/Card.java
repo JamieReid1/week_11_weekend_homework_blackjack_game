@@ -29,4 +29,8 @@ public class Card {
         return this.visibility;
     }
 
+    public void setVisibility(boolean value){
+        this.visibility = value;
+    }
+
 }

@@ -37,5 +37,11 @@ public class CardTest {
         assertEquals(true, card.getVisibility());
     }
 
+    @Test
+    public void canSetCardVisibility(){
+        card.setVisibility(false);
+        assertEquals(false, card.getVisibility());
+    }
+
 
 }
