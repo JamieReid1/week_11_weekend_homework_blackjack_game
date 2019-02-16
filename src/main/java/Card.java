@@ -3,11 +3,13 @@ public class Card {
 
     private Suit suit;
     private Rank rank;
+    private boolean visibility;
 
     public Card(Suit suit, Rank rank){
 
         this.suit = suit;
         this.rank = rank;
+        this.visibility = true;
 
     }
 
@@ -21,6 +23,10 @@ public class Card {
 
     public int getCardValue(){
         return rank.getValue();
+    }
+
+    public boolean getVisibility(){
+        return this.visibility;
     }
 
 }

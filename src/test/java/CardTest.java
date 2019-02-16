@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+
 public class CardTest {
 
     Card card;
@@ -29,6 +30,11 @@ public class CardTest {
     @Test
     public void canGetCardValue(){
         assertEquals(11, card.getCardValue());
+    }
+
+    @Test
+    public void canGetCardVisibility(){
+        assertEquals(true, card.getVisibility());
     }
 
 
