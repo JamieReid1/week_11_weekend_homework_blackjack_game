@@ -8,12 +8,14 @@ public class DealerTest {
 
     private Dealer dealer;
     private Deck deck;
+    private Card card;
 
     @Before
     public void Before(){
 
         dealer = new Dealer();
         deck = new Deck();
+        card = new Card(Suit.DIAMONDS, Rank.ACE);
 
     }
 
@@ -35,6 +37,12 @@ public class DealerTest {
         Card card = dealer.dealCard(deck);
         dealer.getCard(card);
         assertEquals(1, dealer.cardCount());
+    }
+
+    @Test
+    public void canGetHandValue(){
+        dealer.getCard(card);
+        assertEquals(11, dealer.getHandValue());
     }
 
 }
