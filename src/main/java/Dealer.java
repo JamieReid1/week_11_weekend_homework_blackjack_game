@@ -21,4 +21,8 @@ public class Dealer {
         return deck.dealCard();
     }
 
+    public void getCard(Card card){
+        this.hand.add(card);
+    }
+
 }
