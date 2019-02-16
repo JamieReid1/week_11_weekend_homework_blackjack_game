@@ -1,4 +1,8 @@
+
 import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class PlayerTest {
 
@@ -14,6 +18,9 @@ public class PlayerTest {
     }
 
 
-    
+    @Test
+    public void canGetPlayerName(){
+        assertEquals("Jamie", player.getPlayerName());
+    }
 
 }
