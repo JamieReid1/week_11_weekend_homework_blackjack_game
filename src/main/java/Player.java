@@ -39,4 +39,8 @@ public class Player {
         return total;
     }
 
+    public int stick(){
+        return getHandValue();
+    }
+
 }

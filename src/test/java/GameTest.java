@@ -48,7 +48,7 @@ public class GameTest {
     @Test
     public void canPlayGame1Player(){
         game.addPlayer(player1);
-        game.play();
+        game.setup();
         assertEquals(2, dealer.cardCount());
         assertEquals(2, player1.cardCount());
         assertEquals(48, deck.cardCount());
@@ -59,7 +59,7 @@ public class GameTest {
         game.addPlayer(player1);
         game.addPlayer(player2);
         game.addPlayer(player3);
-        game.play();
+        game.setup();
         assertEquals(2, dealer.cardCount());
         assertEquals(2, player1.cardCount());
         assertEquals(2, player2.cardCount());

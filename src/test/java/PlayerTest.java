@@ -49,4 +49,10 @@ public class PlayerTest {
         assertEquals(11, player.getHandValue());
     }
 
+    @Test
+    public void canStick(){
+        player.getCard(card);
+        assertEquals(11, player.stick());
+    }
+
 }

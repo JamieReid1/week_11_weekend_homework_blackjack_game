@@ -25,7 +25,7 @@ public class Game {
         this.players.add(player);
     }
 
-    public void play(){
+    public void setup(){
         deck.shuffleCards();
         for (int i = 0; i < 2; i++){
             Card dealerCard = dealer.dealCard(deck);
