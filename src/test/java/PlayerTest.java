@@ -42,4 +42,10 @@ public class PlayerTest {
         assertEquals(0, player.cardCount());
     }
 
+    @Test
+    public void canGetHandValue(){
+        player.getCard(card);
+        assertEquals(11, player.getHandValue());
+    }
+
 }

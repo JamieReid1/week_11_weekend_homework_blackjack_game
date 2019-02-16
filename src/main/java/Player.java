@@ -30,4 +30,12 @@ public class Player {
         this.hand.clear();
     }
 
+    public int getHandValue(){
+        int total = 0;
+        for (Card card : this.hand) {
+            total += card.getCardValue();
+        }
+        return total;
+    }
+
 }
