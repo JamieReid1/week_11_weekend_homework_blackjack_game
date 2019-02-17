@@ -7,12 +7,14 @@ public class Player {
     private String name;
     private ArrayList<Card> hand;
     private boolean bust;
+    private boolean stick;
 
     public Player(String name){
 
         this.name = name;
         this.hand = new ArrayList<>();
         this.bust = false;
+        this.stick = false;
 
     }
 
@@ -50,6 +52,14 @@ public class Player {
 
     public void setBust(boolean value){
         this.bust = value;
+    }
+
+    public void stick(){
+        this.stick = true;
+    }
+
+    public boolean getStick(){
+        return this.stick;
     }
 
 

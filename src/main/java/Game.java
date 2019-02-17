@@ -52,11 +52,24 @@ public class Game {
         dealerPlay();
         for (Player player : this.players){
             player.getHandValue();
-            if ((!player.getBust() && dealer.getBust()) || (!player.getBust() && !dealer.getBust()) && (player.getHandValue() >= dealer.getHandValue())) {
+            if ((!player.getBust() && dealer.getBust()) || (!player.getBust() && !dealer.getBust()) && (player.getHandValue() > dealer.getHandValue())) {
                 winningPlayers.add(player);
             }
         }
         return winningPlayers;
+    }
+
+    public void allPlayersStuck(){
+        setup();
+        ArrayList<Player> stuckPlayers = new ArrayList<>();
+        for (Player player : this.players){
+            if (player.getStick()){
+                stuckPlayers.add(player);
+            }
+        }
+        if (stuckPlayers.size() == players.size()){
+            checkForWinners();
+        }
     }
 
 
