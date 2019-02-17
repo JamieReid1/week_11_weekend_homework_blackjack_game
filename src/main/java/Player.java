@@ -7,15 +7,13 @@ public class Player {
     private String name;
     private ArrayList<Card> hand;
     private boolean bust;
-    private boolean stick;
+    private boolean stand;
 
     public Player(String name){
-
         this.name = name;
         this.hand = new ArrayList<>();
         this.bust = false;
-        this.stick = false;
-
+        this.stand = false;
     }
 
 
@@ -54,12 +52,12 @@ public class Player {
         this.bust = value;
     }
 
-    public void stick(){
-        this.stick = true;
+    public void stand(){
+        this.stand = true;
     }
 
-    public boolean getStick(){
-        return this.stick;
+    public boolean getStandValue(){
+        return this.stand;
     }
 
 

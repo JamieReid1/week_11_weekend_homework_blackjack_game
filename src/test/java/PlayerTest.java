@@ -64,5 +64,11 @@ public class PlayerTest {
         assertEquals(true, player.getBust());
     }
 
+    @Test
+    public void canStand(){
+        player.stand();
+        assertEquals(true, player.getStandValue());
+    }
+
 
 }

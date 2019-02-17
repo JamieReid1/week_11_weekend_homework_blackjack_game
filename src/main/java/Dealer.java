@@ -8,12 +8,14 @@ public class Dealer {
     private boolean bust;
 
     public Dealer(){
-
         this.hand = new ArrayList<>();
         this.bust = false;
-
     }
 
+
+    public ArrayList<Card> getHand(){
+        return this.hand;
+    }
 
     public int cardCount(){
         return this.hand.size();

@@ -153,4 +153,23 @@ public class GameTest {
         assertArrayEquals(winningPlayers.toArray(), game.checkForWinners().toArray());
     }
 
+    @Test
+    public void canCheckAllPlayersStuckTrue(){
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        player1.stand();
+        player2.stand();
+        assertEquals(true, game.allPlayersStand());
+    }
+
+    @Test
+    public void canCheckAllPlayersStuckFalse(){
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.addPlayer(player3);
+        player1.stand();
+        player2.stand();
+        assertEquals(false, game.allPlayersStand());
+    }
+
 }

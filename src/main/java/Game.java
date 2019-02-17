@@ -9,11 +9,9 @@ public class Game {
     private ArrayList<Player> players;
 
     public Game(Deck deck, Dealer dealer, ArrayList<Player> players){
-
         this.deck = deck;
         this.dealer = dealer;
         this.players = players;
-
     }
 
 
@@ -35,6 +33,7 @@ public class Game {
                 player.getCard(playerCard);
             }
         }
+        dealer.getHand().get(0).setVisibility(true);
     }
 
     public void dealerPlay(){
@@ -49,7 +48,6 @@ public class Game {
 
     public ArrayList<Player> checkForWinners(){
         ArrayList<Player> winningPlayers = new ArrayList<>();
-        dealerPlay();
         for (Player player : this.players){
             player.getHandValue();
             if ((!player.getBust() && dealer.getBust()) || (!player.getBust() && !dealer.getBust()) && (player.getHandValue() > dealer.getHandValue())) {
@@ -59,15 +57,24 @@ public class Game {
         return winningPlayers;
     }
 
-    public void allPlayersStuck(){
-        setup();
+    public boolean allPlayersStand(){
+        boolean value = false;
         ArrayList<Player> stuckPlayers = new ArrayList<>();
         for (Player player : this.players){
-            if (player.getStick()){
+            if (player.getStandValue()){
                 stuckPlayers.add(player);
             }
         }
         if (stuckPlayers.size() == players.size()){
+            value = true;
+        }
+        return value;
+    }
+
+    public void play(){
+        setup();
+        if (allPlayersStand()){
+            dealerPlay();
             checkForWinners();
         }
     }

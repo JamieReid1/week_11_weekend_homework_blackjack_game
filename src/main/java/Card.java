@@ -6,12 +6,11 @@ public class Card {
     private boolean visibility;
 
     public Card(Suit suit, Rank rank){
-
         this.suit = suit;
         this.rank = rank;
-        this.visibility = true;
-
+        this.visibility = false;
     }
+
 
     public Suit getSuit(){
         return suit;
