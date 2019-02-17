@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class Dealer {
 
     private ArrayList<Card> hand;
+    private boolean bust;
 
     public Dealer(){
 
         this.hand = new ArrayList<>();
+        this.bust = false;
 
     }
 
@@ -31,6 +33,14 @@ public class Dealer {
             total += card.getCardValue();
         }
         return total;
+    }
+
+    public boolean getBust(){
+        return this.bust;
+    }
+
+    public void setBust(boolean value){
+        this.bust = value;
     }
 
 }

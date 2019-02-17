@@ -47,4 +47,15 @@ public class DealerTest {
         assertEquals(11, dealer.getHandValue());
     }
 
+    @Test
+    public void canGetBust(){
+        assertEquals(false, dealer.getBust());
+    }
+
+    @Test
+    public void canSetBust(){
+        dealer.setBust(true);
+        assertEquals(true, dealer.getBust());
+    }
+
 }

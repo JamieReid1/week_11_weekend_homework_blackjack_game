@@ -37,5 +37,16 @@ public class Game {
         }
     }
 
+    public void dealerPlay(){
+        while (dealer.getHandValue() <= 16){
+            Card dealerCard = dealer.dealCard(deck);
+            dealer.getCard(dealerCard);
+        }
+        if (dealer.getHandValue() > 21){
+            dealer.setBust(true);
+        }
+        
+    }
+
 
 }
