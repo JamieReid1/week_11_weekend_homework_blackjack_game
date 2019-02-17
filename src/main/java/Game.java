@@ -45,7 +45,18 @@ public class Game {
         if (dealer.getHandValue() > 21){
             dealer.setBust(true);
         }
-        
+    }
+
+    public ArrayList<Player> checkForWinners(){
+        ArrayList<Player> winningPlayers = new ArrayList<>();
+        dealerPlay();
+        for (Player player : this.players){
+            player.getHandValue();
+            if ((!player.getBust() && dealer.getBust()) || (!player.getBust() && !dealer.getBust()) && (player.getHandValue() >= dealer.getHandValue())) {
+                winningPlayers.add(player);
+            }
+        }
+        return winningPlayers;
     }
 
 

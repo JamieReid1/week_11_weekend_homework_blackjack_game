@@ -6,11 +6,13 @@ public class Player {
 
     private String name;
     private ArrayList<Card> hand;
+    private boolean bust;
 
     public Player(String name){
 
         this.name = name;
         this.hand = new ArrayList<>();
+        this.bust = false;
 
     }
 
@@ -36,7 +38,18 @@ public class Player {
         for (Card card : this.hand) {
             total += card.getCardValue();
         }
+        if (total > 21){
+            setBust(true);
+        }
         return total;
+    }
+
+    public boolean getBust(){
+        return this.bust;
+    }
+
+    public void setBust(boolean value){
+        this.bust = value;
     }
 
 

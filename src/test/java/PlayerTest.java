@@ -53,5 +53,16 @@ public class PlayerTest {
         assertEquals(11, player.getHandValue());
     }
 
+    @Test
+    public void canGetBust(){
+        assertEquals(false, player.getBust());
+    }
+
+    @Test
+    public void canSetBust(){
+        player.setBust(true);
+        assertEquals(true, player.getBust());
+    }
+
 
 }
